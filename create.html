@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add a New Room {% endblock %}</h1>
+    <form method="post">
+        <p>
+            <label for="room_type">Room</label>
+            <input type="text" name="room_type" 
+                   placeholder="Room type">
+            </input>
+        </p>
+
+        <p>
+            <label for="room_budget">Budget</label>
+            <input type="text" name="room_budget"
+                   placeholder="Room budget">
+        </input>
+        </p>
+
+        <p>
+            <label for="dimensions">Dimensions</label>
+            <input type="text" name="room_width"
+                   placeholder="Width">
+            </input>
+            <input type="text" name="room_depth"
+                   placeholder="Depth">
+            </input>
+            <input type="text" name="room_height"
+                   placeholder="Height">
+            </input>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}
