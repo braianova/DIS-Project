@@ -1,0 +1,7 @@
+Bedroom Interior Designer
+
+This website provides design options for someone remodeling their bedroom. After inputing your budget and room dimensions, the web-app returns different combinations of beds, wardrobes, dressers, and mirrors you can buy for your room given your constraints.
+
+To use this website, you must first download the IKEA_Items.csv file and run the init_db.py file to initialize the database, which includes an items table (with data from the IKEA_Items.csv file), a users table, and a rooms table. The users table keeps track of registered users, and the rooms table keeps track of the rooms for all of the registered users. You will need the templates base.html, index.html, login.html, profile.html, and register.html in order for the website to compile using the app.py file. 
+
+When you first run app.py, the web-app should take you to the login. If you do not have an account (you will not at first), you will have to register. The web-app will not allow you to login if you are not a registered user. Once you register, go back to the login page, and login. The home screen will have 4 submission boxes, where you input a budget, and dimensions (width, depth, and height) of your desired bedroom. When you click submit, the website gives you 5 different combinations options for a bed, dresser, wardrobe, and mirror to buy for your room. The website also has options to view your profile data, under the "profile" header, logout, under the "logout" header, and read about the website, under the "about" header.
