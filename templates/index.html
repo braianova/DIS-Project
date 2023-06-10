@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Bedroom Interior Designer {% endblock %}</h1>
+
+
+    <h3> Add a New Bedroom </h3>
+        <form method="post">
+
+            <p>
+                <label for="room_budget">Budget</label>
+                <input type="text" name="room_budget"
+                       placeholder="Room budget">
+            </input>
+            </p>
+
+            <p>
+                <label for="dimensions">Dimensions</label>
+                <input type="text" name="room_width"
+                       placeholder="Width">
+                </input>
+                <input type="text" name="room_depth"
+                       placeholder="Depth">
+                </input>
+                <input type="text" name="room_height"
+                       placeholder="Height">
+                </input>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+<div>
+    {% for room in rooms %}
+            <h4>{{ room[2] }} {{ room[1] }} </h4>
+            <div> Budget: {{ room[3] }} </div>
+            <i><p>Dimensions: {{ room[4] }} x {{ room[5] }} x {{ room[6] }}</p></i>
+    
+            {% if solutions_dict %}
+            <h5>Furnishing options: </h5>
+            {% for solution in solutions_dict[room[1]] %}
+                <p> Bed: {{ solution[0] }}, Drawer: {{ solution[1] }}, Wardrobe: {{ solution[2] }}, Mirror: {{ solution[3] }}</p>
+    
+                
+        {% endfor %}
+    {%endif%}
+
+        
+        </div>
+
+    
+    {% endfor %}
+{% endblock %}
